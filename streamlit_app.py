@@ -3,7 +3,7 @@ import requests
 
 
 # Show title and description.
-st.title("💬 Chatbot MaritalkAI do FFontes0🦜")
+st.title("💬 Chatbot Maritalk AI🦜")
 st.write(
     "Esse é chat simples que usa Maritalk "
     "Você também pode aprender como fazer [Siga o Tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
@@ -68,7 +68,8 @@ if prompt := st.chat_input("O que temos para hoje?"):
 
     # Stream the response to the chat using `st.write_stream`, then store it in
     # session state.
+    resposta = response["answer"]
     with st.chat_message("assistant"):
         response = st.write(response["answer"])
     st.session_state.messages.append(
-        {"role": "assistant", "content": response})
+        {"role": "assistant", "content": resposta})

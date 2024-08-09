@@ -34,6 +34,8 @@ if prompt := st.chat_input("O que temos para hoje?"):
     messages = [
         {"role": "user", "content": "bom dia, esta é a mensagem do usuario"},
         {"role": "assistant", "content": "bom dia, esta é a resposta do assistente"},
+        {"role": "user", "content": "Gostaria que usasse respostas que ajudariam um helpdesk que quer ser programador, não precisa falar desse contexto explicitamente"},
+        {"role": "assistant", "content": "Entendi gostaria de usasse esse contexto para te ajudar. Estou aqui para isso."},
         {"role": "user", "content": prompt},
     ]
 

@@ -1,14 +1,14 @@
 import streamlit as st
 import requests
 
-
+tokens = 1000
 # Show title and description.
 st.title("💬 Chatbot Maritalk AI🦜")
 st.write(
     "Esse é chat simples que usa Maritalk "
     "Você também pode aprender como fazer [Siga o Tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
 )
-
+st.write("Configurado para %s tokens(tamanho da resposta)" % tokens)
 url = "https://chat.maritaca.ai/api/chat/inference"
 
 
@@ -40,7 +40,7 @@ if prompt := st.chat_input("O que temos para hoje?"):
     request_data = {
         "messages": messages,
         "do_sample": True,
-        'max_tokens': 200,
+        'max_tokens': tokens,
         "temperature": 0.0,
         "top_p": 0.95,
         "model": "sabia-3",

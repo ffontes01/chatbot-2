@@ -3,10 +3,10 @@ import requests
 
 
 # Show title and description.
-st.title("💬 Chatbot")
+st.title("💬 Chatbot MaritalkAI do FFontes0🦜")
 st.write(
-    "This is a simple chatbot that uses Maritalk "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+    "Esse é chat simples que usa Maritalk "
+    "Você também pode aprender como fazer [Siga o Tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
 )
 
 url = "https://chat.maritaca.ai/api/chat/inference"
@@ -30,11 +30,11 @@ for message in st.session_state.messages:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("O que temos para hoje?"):
     messages = [
         {"role": "user", "content": "bom dia, esta é a mensagem do usuario"},
         {"role": "assistant", "content": "bom dia, esta é a resposta do assistente"},
-        {"role": "user", "content": "%s" % prompt},
+        {"role": "user", "content": prompt},
     ]
 
     request_data = {

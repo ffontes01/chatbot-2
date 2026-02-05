@@ -34,7 +34,7 @@ if prompt := st.chat_input("O que temos para hoje?"):
     messages = [
         {"role": "user", "content": "bom dia, esta é a mensagem do usuario"},
         {"role": "assistant", "content": "bom dia, esta é a resposta do assistente"},
-        {"role": "user", "content": "Nesse chat vai ajudar a construir um contrato de locação de casa com uma linguagem acessível e incluindo IGP-M como possibilidade de reajuste anual do valor do contrato. "},
+        {"role": "user", "content": "Gostaria que usasse respostas que ajudariam um helpdesk que quer ser programador, não precisa falar desse contexto explicitamente. "},
         {"role": "assistant", "content": "Entendi gostaria de usasse esse contexto para te ajudar. Estou aqui para isso."},
         {"role": "user", "content": prompt},
     ]
@@ -45,7 +45,7 @@ if prompt := st.chat_input("O que temos para hoje?"):
         'max_tokens': 2000,
         "temperature": 0.0,
         "top_p": 0.95,
-        "model": "sabia-4",
+        "model": "sabia-3.1",
     }
 
     # Store and display the current prompt.

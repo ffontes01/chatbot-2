@@ -42,7 +42,7 @@ if prompt := st.chat_input("O que temos para hoje?"):
     request_data = {
         "messages": messages,
         "do_sample": True,
-        'max_tokens': 1000,
+        'max_tokens': 2000,
         "temperature": 0.0,
         "top_p": 0.95,
         "model": "sabia-4",
